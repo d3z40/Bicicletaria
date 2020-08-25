@@ -11,7 +11,7 @@ public class Contrato {
     public Contrato(int codigoContrato, Cliente cliente, double valorContrato) {
         this.codigoContrato = codigoContrato;
         this.cliente = cliente;
-        this.bicicleta = new ArrayList();
+        this.bicicleta = new ArrayList<Bicicleta>();
         this.valorContrato = valorContrato;
     }
     
