@@ -126,7 +126,6 @@ public class SistemaBicicletaria {
                     }
                     }
                 case 7:
-                    
                     try {
                     int codigoContrato = DigitoUser.intUser("Digite o código do contrato: ");
                     int codCliente = DigitoUser.intUser("Entre com o código do cliente que deseja inserir nesse contrato: ");
@@ -159,10 +158,11 @@ public class SistemaBicicletaria {
                         }
                     }                     
                     double vlrContrato = DigitoUser.doubleUser("Digite o valor do contrato: ");
-                    cont.add(new Contrato(codigoContrato, cli, vlrContrato));
-                    for(Contrato contrato : cont){
-                        contrato.addBicicleta(bc.get(indexBicicleta));
-                    }   break;
+                    Contrato contrato = new Contrato(codigoContrato, cli, vlrContrato);
+                    contrato.addBicicleta(bc.get(indexBicicleta));
+                    cont.add(contrato);
+                   
+                    break;
                     }
                     catch(Throwable e) {
                         System.out.println("Ocorreu um erro atenção ao preencher os dados.");
